@@ -15,21 +15,6 @@ Versión en formato de libro electrónico (44 páginas tamaño carta).
 - Enlace directo a una página: `index.html#p20`.
 - Botón «PDF» para imprimir o guardar el documento completo en tamaño carta.
 
-## Notas de revisión
-
-El documento es de solo lectura: las jefaturas pueden **agregar notas**, pero no modificar el texto.
-
-1. Pulsa **«✎ Agregar nota»** y haz clic en el punto de la página que quieres comentar.
-2. Escribe tu nombre, área y la observación, y pulsa **Guardar**. Aparece una marca numerada sobre la página.
-3. Haz clic en una marca para leerla, editarla, eliminarla o marcarla como **Atendida**.
-4. El botón **«Notas»** muestra todas las notas con su página (folio impreso) y permite:
-   - **Exportar notas (.json)**: archivo para enviar a la DATMP.
-   - **Excel (.csv)**: concentrado para revisar en Excel.
-   - **Importar notas**: integra los archivos de varias jefaturas en un solo navegador para consolidarlos.
-5. Al imprimir o guardar PDF, las marcas aparecen sobre las páginas y se agrega al final un listado con todas las notas.
-
-Las notas se guardan únicamente en el navegador de cada persona (GitHub Pages no almacena datos); por eso cada jefatura debe exportar su archivo y enviarlo.
-
 ## Contenido
 
 - `index.html`: el eBook.

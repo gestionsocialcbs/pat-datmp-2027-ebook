@@ -48,48 +48,6 @@ button{font:inherit;color:inherit;cursor:pointer}
 .cshade{position:absolute;inset:0;pointer-events:none;background:#000;opacity:0;z-index:5}
 .cface.edge::after{content:'';position:absolute;top:0;bottom:0;width:10px;pointer-events:none;z-index:6}
 
-/* ===== Notas de revisión ===== */
-.tools button.on{background:#E6D194;color:#002F2A;border-color:#E6D194;font-weight:600}
-.tools .badge{display:inline-block;min-width:18px;padding:0 5px;margin-left:4px;border-radius:9px;background:#9B2247;color:#fff;font-size:11px;line-height:18px;text-align:center}
-.nbar{display:none;align-items:center;justify-content:center;gap:10px;padding:6px 16px;background:#E6D194;color:#002F2A;font-size:12.5px;font-weight:600;text-align:center;flex-shrink:0}
-body.notes .nbar{display:flex}
-body.notes .book{cursor:crosshair}
-.pin{position:absolute;z-index:8;width:24px;height:24px;margin:-12px 0 0 -12px;border-radius:50% 50% 50% 0;background:#9B2247;color:#fff;font:700 11px/24px 'Manrope',sans-serif;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.35);border:2px solid #fff;cursor:pointer;transform:rotate(-45deg)}
-.pin span{display:inline-block;transform:rotate(45deg)}
-.pin.done{background:#1E5B4F}
-.pin:hover{filter:brightness(1.15)}
-.npanel{position:fixed;inset:0 0 0 auto;width:min(400px,92vw);background:#fff;color:#161A1D;z-index:20;transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column;box-shadow:0 0 40px rgba(0,0,0,.4)}
-.npanel.open{transform:none}
-.npanel h2{margin:0;padding:16px 18px 10px;font-size:15px;font-weight:700;color:#1E5B4F;border-bottom:1px solid #ddd;display:flex;justify-content:space-between;align-items:center}
-.npanel h2 button{border:0;background:none;font-size:20px;color:#4D4D4D}
-.nacts{display:flex;flex-wrap:wrap;gap:6px;padding:10px 18px;border-bottom:1px solid #eee}
-.nacts button,.nmodal .row button{border:1px solid #1E5B4F;background:#fff;color:#1E5B4F;border-radius:6px;padding:6px 10px;font-size:12px;font-weight:600}
-.nacts button:hover{background:#F5F1DF}
-.nacts .help{flex-basis:100%;font-size:11.5px;line-height:1.45;color:#4D4D4D;margin-top:2px}
-.nlist{overflow:auto;padding:6px 10px 24px;flex-grow:1}
-.nitem{display:block;width:100%;text-align:left;border:0;background:none;border-bottom:1px solid #eee;padding:10px 8px;color:#161A1D}
-.nitem:hover{background:#F5F1DF}
-.nitem .meta{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:#4D4D4D;margin-bottom:4px}
-.nitem .meta b{color:#9B2247;font-family:'IBM Plex Mono',monospace;font-weight:500}
-.nitem .meta .st{font-weight:700;color:#9B2247}.nitem .meta .st.done{color:#1E5B4F}
-.nitem .txt{font-size:13px;line-height:1.45;white-space:pre-wrap;word-break:break-word}
-.nempty{padding:24px 12px;font-size:13px;color:#4D4D4D;line-height:1.5}
-.nmodal{position:fixed;inset:0;z-index:30;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.45);padding:16px}
-.nmodal.open{display:flex}
-.nmodal .box{width:min(460px,100%);background:#fff;color:#161A1D;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.4);padding:18px 20px;display:flex;flex-direction:column;gap:10px}
-.nmodal h3{margin:0;font-size:15px;color:#1E5B4F}
-.nmodal .sub{font-size:12px;color:#4D4D4D;margin-top:-6px}
-.nmodal label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#4D4D4D;display:flex;flex-direction:column;gap:4px}
-.nmodal input[type=text],.nmodal textarea{font:inherit;font-size:13.5px;text-transform:none;letter-spacing:0;font-weight:400;color:#161A1D;border:1px solid #BFBFBF;border-radius:6px;padding:8px 10px;width:100%}
-.nmodal textarea{min-height:120px;resize:vertical;line-height:1.45}
-.nmodal textarea[readonly]{background:#F5F5F5}
-.nmodal .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.nmodal .chk{flex-direction:row;align-items:center;gap:8px;text-transform:none;letter-spacing:0;font-size:13px;font-weight:600;color:#1E5B4F}
-.nmodal .row{display:flex;justify-content:space-between;gap:8px;margin-top:4px}
-.nmodal .row .pri{background:#1E5B4F;color:#fff}
-.nmodal .row .del{border-color:#9B2247;color:#9B2247}
-.nprint{display:none}
-
 .sheet{position:relative;overflow:hidden;background:#fff;color:#161A1D}
 .sheet .inner{transform-origin:0 0}
 #pages{display:none}
@@ -110,16 +68,12 @@ body.notes .book{cursor:crosshair}
 .drawer a span{font-family:'IBM Plex Mono',monospace;color:#1E5B4F;flex-shrink:0}
 .scrim{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:15;display:none}
 .scrim.open{display:block}
-@media (max-width:640px){.top .title small,.tools .opt,.tools .lbl{display:none}.nbar{font-size:11.5px}.nav{width:34px;height:52px;font-size:20px}}
+@media (max-width:640px){.top .title small,.tools .opt{display:none}.nav{width:34px;height:52px;font-size:20px}}
 @media print{
   @page{size:letter portrait;margin:0}
   @page land{size:letter landscape;margin:0}
   html,body{height:auto;overflow:visible;background:#fff;display:block}
-  .top,.bottom,.nav,.drawer,.scrim,.nbar,.npanel,.nmodal{display:none!important}
-  .nprint{display:block!important;break-before:page;color:#161A1D;padding:56px 72px;font-family:'Manrope',sans-serif}
-  .nprint h2{font-size:22px;font-weight:300;margin:0 0 14px}
-  .nprint .ni{border-top:1px solid #ccc;padding:8px 0;font-size:11.5px;line-height:1.45;break-inside:avoid}
-  .nprint .ni b{color:#9B2247}
+  .top,.bottom,.nav,.drawer,.scrim{display:none!important}
   .stage{display:none!important}
   #pages{display:block!important}
   .sheet{display:block!important;break-after:page;width:auto!important;height:auto!important;box-shadow:none!important}
@@ -133,14 +87,11 @@ body.notes .book{cursor:crosshair}
 <header class="top">
   <div class="title">Programa Anual de Trabajo DATMP 2027<small>Versión 1.0 · 26 de octubre de 2026</small></div>
   <div class="tools">
-    <button type="button" id="btnToc" aria-label="Índice">☰<span class="lbl"> Índice</span></button>
-    <button type="button" id="btnNote" aria-pressed="false" title="Activa el modo notas y haz clic sobre la página para dejar una nota">✎<span class="lbl"> Agregar nota</span></button>
-    <button type="button" id="btnNotes" title="Ver, exportar e importar notas">Notas<span class="badge" id="nCount">0</span></button>
+    <button type="button" id="btnToc" aria-label="Índice">☰ Índice</button>
     <button type="button" id="btnFs" class="opt" aria-label="Pantalla completa">⤢ Pantalla completa</button>
     <button type="button" id="btnPrint" class="opt" aria-label="Imprimir o guardar PDF">⎙ PDF</button>
   </div>
 </header>
-<div class="nbar" id="nbar">Modo notas: haz clic en el punto de la página donde quieres dejar tu nota. El texto del documento no se modifica. <button type="button" id="nExit" style="border:1px solid #002F2A;background:none;border-radius:5px;padding:2px 8px;font-size:12px">Salir</button></div>
 <div class="stage" id="stage">
   <button type="button" class="nav prev" id="prev" aria-label="Página anterior">‹</button>
   <div class="book" id="book"></div>
@@ -1246,7 +1197,7 @@ body.notes .book{cursor:crosshair}
 <div style="display: grid; grid-template-columns: 44px 54px minmax(0, 1fr) 80px 120px 34px; gap: 10px; padding: 5px 0; border-bottom: 1px solid #161A1D; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #4D4D4D"><div>Ind.</div><div>Eje</div><div>Indicador</div><div>Origen</div><div style="text-align: right">Meta 2027</div><div style="text-align: right">Pág.</div></div>
 <div style="display: grid; grid-template-columns: 44px 54px minmax(0, 1fr) 80px 120px 34px; gap: 10px; align-items: baseline; padding: 14.1px 0; border-bottom: 1px solid #EDEDED; font-size: 11.5px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #A57F2C">1.1</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #A57F2C">Eje 1</div><div>Consolidación normativa de la CEPPI-BS</div><div style="font-size: 10.5px; color: #4D4D4D">APSPPI</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right">3 fases</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right; color: #4D4D4D">34</div></div><div style="display: grid; grid-template-columns: 44px 54px minmax(0, 1fr) 80px 120px 34px; gap: 10px; align-items: baseline; padding: 14.1px 0; border-bottom: 1px solid #EDEDED; font-size: 11.5px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #A57F2C">1.2</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #A57F2C">Eje 1</div><div>Fichas técnicas arquitectónicas de locales, áreas y servicios</div><div style="font-size: 10.5px; color: #4D4D4D">APSPPI</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right">8 fichas</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right; color: #4D4D4D">35</div></div><div style="display: grid; grid-template-columns: 44px 54px minmax(0, 1fr) 80px 120px 34px; gap: 10px; align-items: baseline; padding: 14.1px 0; border-bottom: 1px solid #EDEDED; font-size: 11.5px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #A57F2C">1.3</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #A57F2C">Eje 1</div><div>Seminario Virtual de Capacitación y Actualización</div><div style="font-size: 10.5px; color: #4D4D4D">Seminario</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right">35 DPS</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right; color: #4D4D4D">36</div></div><div style="display: grid; grid-template-columns: 44px 54px minmax(0, 1fr) 80px 120px 34px; gap: 10px; align-items: baseline; padding: 14.1px 0; border-bottom: 1px solid #EDEDED; font-size: 11.5px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #A57F2C">1.4</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #A57F2C">Eje 1</div><div>Visitas de acompañamiento a UOPSI</div><div style="font-size: 10.5px; color: #4D4D4D">Proyecto N1</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right">20 UOPSI</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right; color: #4D4D4D">37</div></div><div style="display: grid; grid-template-columns: 44px 54px minmax(0, 1fr) 80px 120px 34px; gap: 10px; align-items: baseline; padding: 14.1px 0; border-bottom: 1px solid #EDEDED; font-size: 11.5px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #A57F2C">1.5</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #A57F2C">Eje 1</div><div>Revisión de expedientes de inscripción</div><div style="font-size: 10.5px; color: #4D4D4D">Proyecto N1</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right">400 expedientes</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right; color: #4D4D4D">38</div></div><div style="display: grid; grid-template-columns: 44px 54px minmax(0, 1fr) 80px 120px 34px; gap: 10px; align-items: baseline; padding: 14.1px 0; border-bottom: 1px solid #EDEDED; font-size: 11.5px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #1E5B4F">2.1</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #1E5B4F">Eje 2</div><div>Inscripción en línea</div><div style="font-size: 10.5px; color: #4D4D4D">AO</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right">20%</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right; color: #4D4D4D">39</div></div><div style="display: grid; grid-template-columns: 44px 54px minmax(0, 1fr) 80px 120px 34px; gap: 10px; align-items: baseline; padding: 14.1px 0; border-bottom: 1px solid #EDEDED; font-size: 11.5px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #002F2A">3.1</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #002F2A">Eje 3</div><div>Tablero único y semáforo mensual</div><div style="font-size: 10.5px; color: #4D4D4D">AO</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right">12 cortes</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right; color: #4D4D4D">40</div></div><div style="display: grid; grid-template-columns: 44px 54px minmax(0, 1fr) 80px 120px 34px; gap: 10px; align-items: baseline; padding: 14.1px 0; border-bottom: 1px solid #EDEDED; font-size: 11.5px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #002F2A">3.2</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #002F2A">Eje 3</div><div>Inscripciones en Municipios Prioritarios</div><div style="font-size: 10.5px; color: #4D4D4D">AO</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right">44 de 61 municipios</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right; color: #4D4D4D">41</div></div><div style="display: grid; grid-template-columns: 44px 54px minmax(0, 1fr) 80px 120px 34px; gap: 10px; align-items: baseline; padding: 14.1px 0; border-bottom: 1px solid #EDEDED; font-size: 11.5px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #002F2A">3.3</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #002F2A">Eje 3</div><div>Automatización de la programación CTPAA/PAA</div><div style="font-size: 10.5px; color: #4D4D4D">AO</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right">4 etapas</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right; color: #4D4D4D">42</div></div><div style="display: grid; grid-template-columns: 44px 54px minmax(0, 1fr) 80px 120px 34px; gap: 10px; align-items: baseline; padding: 14.1px 0; border-bottom: 1px solid #EDEDED; font-size: 11.5px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9B2247">4.1</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #9B2247">Eje 4</div><div>Recalendarización de proyectos de espacios acuáticos</div><div style="font-size: 10.5px; color: #4D4D4D">APSPPI</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right">4 proyectos</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right; color: #4D4D4D">43</div></div><div style="display: grid; grid-template-columns: 44px 54px minmax(0, 1fr) 80px 120px 34px; gap: 10px; align-items: baseline; padding: 14.1px 0; border-bottom: 1px solid #EDEDED; font-size: 11.5px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9B2247">4.2</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #9B2247">Eje 4</div><div>Instalación de CCTV en los OOAD</div><div style="font-size: 10.5px; color: #4D4D4D">APSPPI</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right">15 OOAD</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-align: right; color: #4D4D4D">44</div></div>
 </div>
-<div style="font-size: 11px; line-height: 1.5; border-left: 3px solid #9B2247; padding: 3px 0 3px 12px">Los campos marcados <span style="color: #9B2247">[por validar]</span> requieren confirmación de la jefatura responsable: área responsable del indicador 1.3. El identificador de cada ficha corresponde al número del indicador de esta tabla. Estrategia y línea de acción DPES: no aplica, ya que están diseñadas para el otorgamiento de servicios y la DATMP no otorga servicios a la población usuaria; las fichas se alinean al Objetivo 3 del PIIMSS 2025–2030 con la relevancia de las secciones 6.3 a 6.5. El proyecto «Rescate en unidades ancla y Plan Michoacán» tendrá ficha cuando se definan su indicador y meta.</div>
+<div style="font-size: 11px; line-height: 1.5; border-left: 3px solid #9B2247; padding: 3px 0 3px 12px">El identificador de cada ficha corresponde al número del indicador de esta tabla. Estrategia y línea de acción DPES: no aplica, ya que están diseñadas para el otorgamiento de servicios y la DATMP no otorga servicios a la población usuaria; las fichas se alinean al Objetivo 3 del PIIMSS 2025–2030 con la relevancia de las secciones 6.3 a 6.5. El proyecto «Rescate en unidades ancla y Plan Michoacán» tendrá ficha cuando se definan su indicador y meta.</div>
 </div>
 <div style="display: flex; justify-content: space-between; font-size: 11px; color: #4D4D4D; border-top: 1px solid #CCCCCC; padding-top: 14px">
 <div>07 · Fichas técnicas de indicadores</div>
@@ -1357,7 +1308,7 @@ body.notes .book{cursor:crosshair}
 <div style="display: flex; flex-direction: column; gap: 2px; font-size: 10px; line-height: 1.4; text-align: justify">
 <div><b>Estrategia:</b> No aplica</div>
 <div><b>Línea de acción DPES:</b> No aplica</div>
-<div><b>Área responsable:</b> DATMP · <span style="color: #A42144">[Área por validar]</span></div>
+<div><b>Área responsable:</b> DATMP · Todas</div>
 <div><b>Nombre del programa o proyecto:</b> <b><u>Seminario Virtual de Capacitación y Actualización</u></b></div>
 <div><b>Descripción del programa o proyecto:</b> Seminario virtual para los 35 Departamentos de Prestaciones Sociales; retoma el Encuentro virtual 2026.</div>
 <div><b>Objetivo:</b> Fortalecer las capacidades técnicas, normativas y operativas del personal operativo y administrativo de los Departamentos de Prestaciones Sociales de los OOAD, mediante el Seminario Virtual de Capacitación y Actualización, para promover la correcta ejecución de los procesos institucionales, la estandarización de criterios, la mejora continua y el uso adecuado del SIPSI.</div>
@@ -1381,11 +1332,11 @@ body.notes .book{cursor:crosshair}
 <div style="height: 3px; background: #F2F2F2"></div>
 <div style="display: grid; grid-template-columns: 1fr 1.5fr 1fr"><div style="background: #51939F; color: #FFFFFF; font-size: 10.5px; font-weight: 700; text-align: center; padding: 1.8199999999999998px 6px; line-height: 1.15">Unidad de medida:</div><div style="background: #51939F; color: #FFFFFF; font-size: 10.5px; font-weight: 700; text-align: center; padding: 1.8199999999999998px 6px; line-height: 1.15">Desagregación geográfica:</div><div style="background: #51939F; color: #FFFFFF; font-size: 10.5px; font-weight: 700; text-align: center; padding: 1.8199999999999998px 6px; line-height: 1.15">Frecuencia de medición:</div></div>
 <div style="display: grid; grid-template-columns: 1fr 1.5fr 1fr"><div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr))"><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Porcentual</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">(X)</div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Valor absoluto</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">( )</div></div></div><div style="display: flex; align-items: center; justify-content: center; font-size: 10.5px; border-left: 1px solid #BFBFBF">35 OOAD</div><div style="display: flex; align-items: center; justify-content: center; font-size: 10.5px; border-left: 1px solid #BFBFBF">Trimestral</div></div>
-<div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); border-bottom: 1px solid #BFBFBF"><div style="background: #51939F; color: #FFFFFF; font-size: 10.5px; font-weight: 700; padding: 1.8199999999999998px 8px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2">Área responsable del indicador:</div><div style="font-size: 10px; line-height: 1.35; padding: 0.82px 8px; border-right: 1px solid #BFBFBF"><b>DATMP · <span style="color: #A42144">[Área por validar]</span></b></div></div>
+<div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); border-bottom: 1px solid #BFBFBF"><div style="background: #51939F; color: #FFFFFF; font-size: 10.5px; font-weight: 700; padding: 1.8199999999999998px 8px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2">Área responsable del indicador:</div><div style="font-size: 10px; line-height: 1.35; padding: 0.82px 8px; border-right: 1px solid #BFBFBF"><b>DATMP&nbsp;</b></div></div>
 <div style="background: #2E3959; color: #FFFFFF; font-size: 11px; font-weight: 700; text-align: center; padding: 1.8199999999999998px 0">3. Determinación de metas</div>
 <div style="display: grid; grid-template-columns: 1fr 16px 1fr"><div><div style="background: #CF6E71; color: #FFFFFF; font-size: 10.5px; font-weight: 700; text-align: center; padding: 1.8199999999999998px 6px; line-height: 1.15">Línea basal nominal:</div><div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr))"><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Meta anual:</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D"><b>35 DPS</b></div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Año:</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">2027</div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Periodo:</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">Enero – diciembre</div></div></div></div><div></div><div><div style="background: #CF6E71; color: #FFFFFF; font-size: 10.5px; font-weight: 700; text-align: center; padding: 1.8199999999999998px 6px; line-height: 1.15">Meta en porcentaje:</div><div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr))"><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Valor:</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D"><b>100%</b></div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Año:</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">2027</div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Periodo:</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">Enero – diciembre</div></div></div></div></div>
 <div style="height: 4px"></div>
-<div style="display: grid; grid-template-columns: 1fr 16px 1fr"><div><div style="background: #CF6E71; color: #FFFFFF; font-size: 10.5px; font-weight: 700; text-align: center; padding: 1.8199999999999998px 6px; line-height: 1.15">Comportamiento del indicador hacia la meta:</div><div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr))"><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Ascendente</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">(X)</div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Descendente</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">( )</div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Nominal</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">(X)</div></div></div></div><div></div><div><div style="background: #CF6E71; color: #FFFFFF; font-size: 10.5px; font-weight: 700; text-align: center; padding: 1.8199999999999998px 6px; line-height: 1.15">Parámetros de semaforización:</div><div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr))"><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="background: #225B4E; color: #FFFFFF; font-size: 10px; font-weight: 700; padding: 0.82px 4px">Verde</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">> 80%</div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="background: #FFC000; color: #FFFFFF; font-size: 10px; font-weight: 700; padding: 0.82px 4px">Amarillo</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">> 50% – ≤ 80%</div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="background: #A42144; color: #FFFFFF; font-size: 10px; font-weight: 700; padding: 0.82px 4px">Rojo</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">≤ 50%</div></div></div></div></div>
+<div style="display: grid; grid-template-columns: 1fr 16px 1fr"><div><div style="background: #CF6E71; color: #FFFFFF; font-size: 10.5px; font-weight: 700; text-align: center; padding: 1.8199999999999998px 6px; line-height: 1.15">Comportamiento del indicador hacia la meta:</div><div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr))"><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Ascendente</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">(X)</div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Descendente</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">( )</div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="font-size: 10.5px; padding: 0.82px 4px; border-bottom: 1px solid #BFBFBF">Nominal</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">(X)</div></div></div></div><div></div><div><div style="background: #CF6E71; color: #FFFFFF; font-size: 10.5px; font-weight: 700; text-align: center; padding: 1.8199999999999998px 6px; line-height: 1.15">Parámetros de semaforización:</div><div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr))"><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="background: #225B4E; color: #FFFFFF; font-size: 10px; font-weight: 700; padding: 0.82px 4px">Verde</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">&gt; 80%</div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="background: #FFC000; color: #FFFFFF; font-size: 10px; font-weight: 700; padding: 0.82px 4px">Amarillo</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">&gt; 50% – ≤ 80%</div></div><div style="display: flex; flex-direction: column; text-align: center; border-left: 1px solid #BFBFBF"><div style="background: #A42144; color: #FFFFFF; font-size: 10px; font-weight: 700; padding: 0.82px 4px">Rojo</div><div style="font-size: 10.5px; padding: 0.82px 4px; color: #161A1D">≤ 50%</div></div></div></div></div>
 <div style="height: 4px; background: #F2F2F2"></div>
 <div style="display: grid; grid-template-columns: 180px minmax(0, 1fr); border-bottom: 1px solid #BFBFBF"><div style="background: #CF6E71; color: #FFFFFF; font-size: 10.5px; font-weight: 700; padding: 1.8199999999999998px 8px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2">Método de verificación:</div><div style="font-size: 10px; line-height: 1.35; padding: 0.82px 8px; border-right: 1px solid #BFBFBF">Registro de participación por Departamento de Prestaciones Sociales.</div></div>
 </div></div>
@@ -1794,34 +1745,6 @@ body.notes .book{cursor:crosshair}
   <h2>Índice de páginas <button type="button" id="closeToc" aria-label="Cerrar">×</button></h2>
   <nav id="toc"><a href="#p01"><span>01</span>Portada</a><a href="#p02"><span>03</span>Contenido</a><a href="#p03"><span>04</span>Objetivo</a><a href="#p04"><span>05</span>¿Quiénes somos?</a><a href="#p05"><span>06</span>Responsabilidades normativas</a><a href="#p06"><span>07</span>Estructura, áreas y jefaturas</a><a href="#p07"><span>08</span>Resultados 2026</a><a href="#p08"><span>09</span>Hito 2026 · Bienestar Social en línea</a><a href="#p09"><span>10</span>Avance de inscripciones y asistencias</a><a href="#p10"><span>11</span>Avance por OOAD</a><a href="#p11"><span>12</span>Composición de la oferta por OOAD</a><a href="#p12"><span>13</span>Presupuesto asignado 2026</a><a href="#p13"><span>14</span>Ingresos 2026</a><a href="#p14"><span>15</span>Resultados APSPPI 2026</a><a href="#p15"><span>16</span>Resultados del Área de Normatividad 2026</a><a href="#p16"><span>17</span>Alineación</a><a href="#p17"><span>18</span>Encuadre en el PT CBS 2025–2030</a><a href="#p18"><span>19</span>Encuadre en el PT CBS 2026</a><a href="#p19"><span>20</span>Encuadre en los Lineamientos de Operación</a><a href="#p20"><span>21</span>Mapa estratégico 2027 (BSC)</a><a href="#p21"><span>22</span>Propuesta de ejes estratégicos 2027</a><a href="#p22"><span>23</span>Indicadores Eje 1 · 1.1 – 1.2 · CEPPI-BS y fichas técnicas</a><a href="#p23"><span>24</span>Indicadores Eje 1 · 1.3 · Seminario</a><a href="#p24"><span>25</span>Indicadores Eje 1 · 1.4 – 1.5 · Visitas y revisión de expedientes</a><a href="#p25"><span>26</span>Indicadores Eje 2 · 2.1 · Inscripción en línea</a><a href="#p26"><span>27</span>Indicadores Eje 3 · 3.1 · Tablero único y semáforo</a><a href="#p27"><span>28</span>Indicadores Eje 3 · 3.2 – 3.3</a><a href="#p28"><span>29</span>Indicador 3.2 · Municipios Prioritarios</a><a href="#p29"><span>30</span>Municipios Prioritarios sin UOPSI</a><a href="#p30"><span>31</span>Indicadores Eje 4 · 4.1 – 4.2 · Infraestructura social</a><a href="#p31"><span>32</span>Anexos</a><a href="#p32"><span>33</span>Fichas técnicas de indicadores</a><a href="#p33"><span>34</span>Ficha técnica · Indicador 1.1 · Consolidación normativa de la CEPPI-BS</a><a href="#p34"><span>35</span>Ficha técnica · Indicador 1.2 · Fichas técnicas arquitectónicas de locales, áreas y servicios</a><a href="#p35"><span>36</span>Ficha técnica · Indicador 1.3 · Seminario Virtual de Capacitación y Actualización</a><a href="#p36"><span>37</span>Ficha técnica · Indicador 1.4 · Visitas de acompañamiento a UOPSI</a><a href="#p37"><span>38</span>Ficha técnica · Indicador 1.5 · Revisión de expedientes de inscripción</a><a href="#p38"><span>39</span>Ficha técnica · Indicador 2.1 · Inscripción en línea</a><a href="#p39"><span>40</span>Ficha técnica · Indicador 3.1 · Tablero único y semáforo mensual</a><a href="#p40"><span>41</span>Ficha técnica · Indicador 3.2 · Inscripciones en Municipios Prioritarios</a><a href="#p41"><span>42</span>Ficha técnica · Indicador 3.3 · Automatización de la programación CTPAA/PAA</a><a href="#p42"><span>43</span>Ficha técnica · Indicador 4.1 · Recalendarización de proyectos de espacios acuáticos</a><a href="#p43"><span>44</span>Ficha técnica · Indicador 4.2 · Instalación de CCTV en los OOAD</a><a href="#p44"><span>45</span>Contraportada</a></nav>
 </aside>
-<aside class="npanel" id="npanel" aria-label="Notas de revisión">
-  <h2><span>Notas de revisión <span id="nTot" style="font-weight:400;color:#4D4D4D"></span></span><button type="button" id="nClose" aria-label="Cerrar">×</button></h2>
-  <div class="nacts">
-    <button type="button" id="nExport">⬇ Exportar notas (.json)</button>
-    <button type="button" id="nCsv">⬇ Excel (.csv)</button>
-    <button type="button" id="nImport">⬆ Importar notas</button>
-    <input type="file" id="nFile" accept=".json,application/json" multiple hidden>
-    <div class="help">Las notas se guardan solo en este navegador. Para entregarlas, usa «Exportar notas» y envía el archivo a la DATMP; quien consolida puede importar los archivos de todas las jefaturas.</div>
-  </div>
-  <div class="nlist" id="nlist"></div>
-</aside>
-<div class="nmodal" id="nmodal" role="dialog" aria-modal="true" aria-labelledby="nmTitle">
-  <div class="box">
-    <h3 id="nmTitle">Nota</h3>
-    <div class="sub" id="nmSub"></div>
-    <div class="two">
-      <label>Nombre<input type="text" id="nmName" maxlength="80" autocomplete="name"></label>
-      <label>Área<input type="text" id="nmArea" maxlength="80"></label>
-    </div>
-    <label>Nota<textarea id="nmText" maxlength="3000" placeholder="Escribe tu observación sobre este punto de la página"></textarea></label>
-    <label class="chk"><input type="checkbox" id="nmDone"> Atendida</label>
-    <div class="row">
-      <button type="button" class="del" id="nmDel">Eliminar</button>
-      <span style="display:flex;gap:8px"><button type="button" id="nmCancel">Cancelar</button><button type="button" class="pri" id="nmSave">Guardar</button></span>
-    </div>
-  </div>
-</div>
-<div class="nprint" id="nprint"></div>
 <script>
 (function(){
   var book=document.getElementById('book'),stage=document.getElementById('stage');
@@ -1830,6 +1753,7 @@ body.notes .book{cursor:crosshair}
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function W(i){return +src[i].dataset.w}function H(i){return +src[i].dataset.h}
   function land(i){return src[i].classList.contains('landscape')}
+  var folios=src.map(function(x){return x.dataset.folio});function fol(i){return folios[i]||String(i+1).padStart(2,'0')}
   function idx(x){return x==null||x==='B'?null:(typeof x==='object'?x.h:x)}
   function face(i,kk){
     if(i==null||i==='B'){var d=document.createElement('div');d.className='blank';return d}
@@ -1841,7 +1765,7 @@ body.notes .book{cursor:crosshair}
     }
     var c=src[i].cloneNode(true);c.removeAttribute('id');
     c.style.width=W(i)*kk+'px';c.style.height=H(i)*kk+'px';
-    c.firstElementChild.style.transform='scale('+kk+')';addPins(c,i);return c;
+    c.firstElementChild.style.transform='scale('+kk+')';return c;
   }
   function build(){
     two=window.innerWidth>=1000&&window.innerWidth>window.innerHeight;spreads=[];
@@ -1964,23 +1888,15 @@ body.notes .book{cursor:crosshair}
   document.getElementById('prev').onclick=function(){go(-1)};
   document.getElementById('next').onclick=function(){go(1)};
   document.getElementById('slider').onchange=function(e){var s=spreadOf(+e.target.value);if(Math.abs(s-cur)===1)turn(s);else if(s!==cur&&!busy){fallback(s,s>cur?1:-1)}};
-  book.addEventListener('click',function(e){
-    var pn=e.target.closest('.pin');if(pn){e.stopPropagation();openNote(pn.dataset.id);return}
-    if(busy)return;
-    if(noteMode){var sh=e.target.closest('.sheet');if(!sh)return;var rc=sh.getBoundingClientRect();
-      var x=(e.clientX-rc.left)/rc.width,y=(e.clientY-rc.top)/rc.height;if(x<0||x>1||y<0||y>1)return;
-      newNote(+sh.dataset.i,x,y);return}
-    var r=book.getBoundingClientRect();go(e.clientX-r.left>r.width/2?1:-1)});
+  book.addEventListener('click',function(e){if(busy)return;var r=book.getBoundingClientRect();go(e.clientX-r.left>r.width/2?1:-1)});
   document.addEventListener('keydown',function(e){
-    if(modal.classList.contains('open')){if(e.key==='Escape')closeModal();return}
-    if(/INPUT|TEXTAREA/.test(e.target.tagName))return;
     if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();go(1)}
     if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1)}
     if(e.key==='Home'&&!busy)fallback(0,-1);if(e.key==='End'&&!busy)fallback(spreads.length-1,1);
-    if(e.key==='Escape'){toggleToc(false);toggleNP(false);setMode(false)}
+    if(e.key==='Escape')toggleToc(false);
   });
   var x0=null;
-  stage.addEventListener('touchstart',function(e){x0=noteMode?null:e.touches[0].clientX},{passive:true});
+  stage.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
   stage.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(dx<0?1:-1);x0=null});
   var drawer=document.getElementById('drawer'),scrim=document.getElementById('scrim');
   function toggleToc(o){drawer.classList.toggle('open',o);scrim.classList.toggle('open',o)}
@@ -1990,90 +1906,7 @@ body.notes .book{cursor:crosshair}
   document.getElementById('btnFs').onclick=function(){if(document.fullscreenElement)document.exitFullscreen();else if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen()};
   document.getElementById('btnPrint').onclick=function(){window.print()};
   var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){if(busy)return;var p=first(spreads[cur]);build();cur=spreadOf(p);layout(spreads[cur]);status()},120)});
-
-  /* ===== Notas de revisión ===== */
-  var KEY='pat-datmp-2027-notas-v1',KME='pat-datmp-2027-revisor',DOC='PAT DATMP 2027 · Versión 1.0 · 26 oct 2026';
-  var noteMode=false,editing=null,draft=null,modal=document.getElementById('nmodal');
-  function rd(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
-  function wr(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
-  var notes=rd(KEY,[]),me=rd(KME,{name:'',area:''});
-  var titles=[].map.call(document.querySelectorAll('#toc a'),function(a){return a.textContent.replace(/^\d+/,'').trim()});
-  var folios=src.map(function(x){return x.dataset.folio});function fol(i){return folios[i]||String(i+1).padStart(2,'0')}
-  function pageNotes(i){return notes.filter(function(n){return n.p===i}).sort(function(a,b){return a.ts<b.ts?-1:1})}
-  function numOf(n){return pageNotes(n.p).indexOf(n)+1}
-  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-  function fdate(ts){var d=new Date(ts);return isNaN(d)?'':d.toLocaleDateString('es-MX',{day:'2-digit',month:'short',year:'numeric'})+' '+d.toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit'})}
-  function addPins(el,i){
-    el.dataset.i=i;el.querySelectorAll('.pin').forEach(function(p){p.remove()});
-    pageNotes(i).forEach(function(n,j){var p=document.createElement('div');p.className='pin'+(n.done?' done':'');p.dataset.id=n.id;
-      p.style.left=(n.x*100)+'%';p.style.top=(n.y*100)+'%';p.title=(n.author||'')+': '+n.text.slice(0,120);p.innerHTML='<span>'+(j+1)+'</span>';el.appendChild(p)});
-  }
-  function refresh(){if(!busy){layout(spreads[cur])}renderList()}
-  function persist(){wr(KEY,notes);refresh()}
-  function setMode(o){noteMode=o;document.body.classList.toggle('notes',o);var b=document.getElementById('btnNote');b.classList.toggle('on',o);b.setAttribute('aria-pressed',o)}
-  document.getElementById('btnNote').onclick=function(){setMode(!noteMode)};
-  document.getElementById('nExit').onclick=function(){setMode(false)};
-  function openModal(n,isNew){
-    editing=n;draft=isNew;
-    document.getElementById('nmTitle').textContent=isNew?'Nueva nota':'Nota '+numOf(n)+' · Pág. '+fol(n.p);
-    document.getElementById('nmSub').textContent='Página '+fol(n.p)+' · '+(titles[n.p]||'')+(isNew?'':' · '+fdate(n.ts));
-    var nm=document.getElementById('nmName'),ar=document.getElementById('nmArea'),tx=document.getElementById('nmText');
-    nm.value=isNew?me.name:(n.author||'');ar.value=isNew?me.area:(n.area||'');tx.value=n.text||'';
-    var other=!isNew&&n.author&&me.name&&n.author!==me.name;
-    tx.readOnly=nm.readOnly=ar.readOnly=!!other;
-    document.getElementById('nmDone').checked=!!n.done;
-    document.getElementById('nmDel').style.visibility=isNew||other?'hidden':'visible';
-    modal.classList.add('open');setTimeout(function(){(isNew&&!me.name?nm:tx).focus()},30);
-  }
-  function closeModal(){modal.classList.remove('open');editing=null}
-  function newNote(i,x,y){openModal({id:'n'+Date.now().toString(36)+Math.random().toString(36).slice(2,6),p:i,x:+x.toFixed(4),y:+y.toFixed(4),text:'',done:false},true)}
-  function openNote(id){var n=notes.find(function(z){return z.id===id});if(n)openModal(n,false)}
-  document.getElementById('nmCancel').onclick=closeModal;
-  modal.addEventListener('click',function(e){if(e.target===modal)closeModal()});
-  document.getElementById('nmSave').onclick=function(){
-    var n=editing;if(!n)return;var t=document.getElementById('nmText').value.trim(),nm=document.getElementById('nmName').value.trim(),ar=document.getElementById('nmArea').value.trim();
-    if(!nm){document.getElementById('nmName').focus();return}
-    if(!t){document.getElementById('nmText').focus();return}
-    if(!document.getElementById('nmText').readOnly){n.text=t;n.author=nm;n.area=ar;me={name:nm,area:ar};wr(KME,me)}
-    n.done=document.getElementById('nmDone').checked;
-    if(draft){n.ts=new Date().toISOString();n.doc=DOC;n.folio=fol(n.p);notes.push(n)}else{n.edited=new Date().toISOString()}
-    closeModal();persist();
-  };
-  document.getElementById('nmDel').onclick=function(){var n=editing;if(!n)return;notes=notes.filter(function(z){return z.id!==n.id});closeModal();persist()};
-  var np=document.getElementById('npanel');
-  function toggleNP(o){np.classList.toggle('open',o);scrim.classList.toggle('open',o||drawer.classList.contains('open'))}
-  document.getElementById('btnNotes').onclick=function(){renderList();toggleNP(true)};
-  document.getElementById('nClose').onclick=function(){toggleNP(false)};
-  scrim.addEventListener('click',function(){toggleNP(false)});
-  function goPage(i){var s=spreadOf(i);if(Math.abs(s-cur)===1)turn(s);else if(s!==cur&&!busy)fallback(s,s>cur?1:-1)}
-  function sorted(){return notes.slice().sort(function(a,b){return a.p-b.p||(a.ts<b.ts?-1:1)})}
-  function renderList(){
-    document.getElementById('nCount').textContent=notes.length;
-    document.getElementById('nTot').textContent='('+notes.length+')';
-    var L=document.getElementById('nlist');
-    if(!notes.length){L.innerHTML='<div class="nempty">Aún no hay notas. Pulsa <b>«✎ Agregar nota»</b> y haz clic sobre el punto de la página que quieres comentar. El contenido del documento no se puede modificar; las notas quedan como marcas sobre la página.</div>';return}
-    L.innerHTML=sorted().map(function(n){return '<button type="button" class="nitem" data-id="'+n.id+'"><div class="meta"><span><b>Pág. '+fol(n.p)+' · #'+numOf(n)+'</b> · '+esc(n.author||'')+(n.area?' ('+esc(n.area)+')':'')+'</span><span class="st'+(n.done?' done':'')+'">'+(n.done?'Atendida':'Pendiente')+'</span></div><div class="txt">'+esc(n.text)+'</div><div class="meta" style="margin:4px 0 0">'+esc(titles[n.p]||'')+' · '+fdate(n.ts)+'</div></button>'}).join('');
-    [].forEach.call(L.querySelectorAll('.nitem'),function(b){b.onclick=function(){var n=notes.find(function(z){return z.id===b.dataset.id});toggleNP(false);if(n){goPage(n.p);setTimeout(function(){openNote(n.id)},busy?1150:50)}}});
-  }
-  function download(name,data,type){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type:type}));a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500)}
-  function stamp(){var d=new Date();return d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')}
-  function slug(t){return (t||'revisor').normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^\w]+/g,'-').replace(/^-|-$/g,'').slice(0,40)}
-  document.getElementById('nExport').onclick=function(){if(!notes.length)return;download('notas-PAT2027-'+slug(me.name)+'-'+stamp()+'.json',JSON.stringify({documento:DOC,exportado:new Date().toISOString(),revisor:me,notas:sorted()},null,2),'application/json')};
-  document.getElementById('nCsv').onclick=function(){if(!notes.length)return;var q=function(v){return '"'+String(v==null?'':v).replace(/"/g,'""')+'"'};
-    var rows=[['Página','Nota','Sección','Revisor','Área','Fecha','Estado','Observación']].concat(sorted().map(function(n){return [fol(n.p),numOf(n),titles[n.p]||'',n.author||'',n.area||'',fdate(n.ts),n.done?'Atendida':'Pendiente',n.text]}));
-    download('notas-PAT2027-'+stamp()+'.csv','﻿'+rows.map(function(r){return r.map(q).join(',')}).join('\r\n'),'text/csv;charset=utf-8')};
-  var fi=document.getElementById('nFile');document.getElementById('nImport').onclick=function(){fi.value='';fi.click()};
-  fi.onchange=function(){var fs=[].slice.call(fi.files),added=0,left=fs.length;fs.forEach(function(f){var r=new FileReader();r.onload=function(){try{var d=JSON.parse(r.result),arr=Array.isArray(d)?d:(d.notas||[]);
-      arr.forEach(function(n){if(!n||typeof n.p!=='number'||!(n.p>=0&&n.p<N)||typeof n.text!=='string')return;var ex=notes.find(function(z){return z.id===n.id});
-        var c={folio:n.folio,id:String(n.id||('n'+Math.random().toString(36).slice(2))),p:n.p,x:Math.min(1,Math.max(0,+n.x||0)),y:Math.min(1,Math.max(0,+n.y||0)),text:n.text.slice(0,3000),author:String(n.author||'').slice(0,80),area:String(n.area||'').slice(0,80),ts:String(n.ts||new Date().toISOString()),done:!!n.done,doc:n.doc};
-        if(ex){if((n.edited||n.ts)>(ex.edited||ex.ts))Object.assign(ex,c)}else{notes.push(c);added++}})}catch(e){}
-      if(--left===0){persist();var L=document.getElementById('nlist');var m=document.createElement('div');m.className='nempty';m.style.color='#1E5B4F';m.textContent='Se importaron '+added+' nota(s) nuevas.';L.prepend(m)}};r.readAsText(f)})};
-  window.addEventListener('beforeprint',function(){
-    [].forEach.call(document.querySelectorAll('#pages .sheet'),function(sh,i){addPins(sh,i)});
-    var P=document.getElementById('nprint');P.innerHTML=notes.length?'<h2>Notas de revisión</h2>'+sorted().map(function(n){return '<div class="ni"><b>Pág. '+fol(n.p)+' · Nota '+numOf(n)+'</b> · '+esc(n.author||'')+(n.area?' ('+esc(n.area)+')':'')+' · '+fdate(n.ts)+' · '+(n.done?'Atendida':'Pendiente')+'<br>'+esc(n.text).replace(/\n/g,'<br>')+'</div>'}).join(''):'';
-  });
-  window.addEventListener('afterprint',function(){[].forEach.call(document.querySelectorAll('#pages .pin'),function(p){p.remove()})});
-  build();renderList();
+  build();
   var m=location.hash.match(/^#p(\d+)/);cur=m?spreadOf(Math.min(N,Math.max(1,+m[1]))-1):0;
   layout(spreads[cur]);status();
 })();
